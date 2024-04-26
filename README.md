@@ -30,6 +30,7 @@ Copy code
 pip install numpy scipy networkx matplotlib
 Here is the Python code to create and visualize the minimum spanning tree:
 
+```
 python
 Copy code
 import numpy as np
@@ -71,6 +72,8 @@ plt.subplot(122)
 nx.draw(mst, pos, with_labels=True, node_color='orange', edge_color='blue', node_size=500)
 plt.title('Minimum Spanning Tree')
 plt.show()
+```
+
 In this code:
 
 We calculate the pairwise distances between points and create a graph with edges weighted by these distances.
@@ -110,6 +113,7 @@ Refinement with potential Steiner points: Attempt to reduce the path length by e
 Recompute the MST: After adding a Steiner point, recompute the MST with the new set of points.
 Let’s sketch a Python implementation for this basic approach. We'll use libraries like numpy, scipy, and networkx for calculations and matplotlib for visualization:
 
+```
 python
 Copy code
 import numpy as np
@@ -156,6 +160,8 @@ compute_mst_and_plot(points)
 # Add Fermat points and recompute the MST
 points_with_fermat = add_fermat_points(points)
 compute_mst_and_plot(points_with_fermat)
+```
+
 Explanation:
 Fermat Points: We're using centroids of triangles as a simplification for potential Steiner points. The true Fermat point minimizes the total distance to the triangle's vertices but is complex to calculate exactly.
 Visualization: We show the MST before and after adding potential Steiner points.
